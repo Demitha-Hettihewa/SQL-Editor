@@ -1,0 +1,61 @@
+{
+	"name": "dem-sql-highlighter",
+	"displayName": "Dem SQL Highlighter",
+	"description": "This highlights relevant value of the column in a insert query",
+	"version": "0.0.2",
+	"publisher": "DemithaHettihewa",
+	"engines": {
+		"vscode": "^1.60.1"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:dem-sql-highlighter.highlightValue"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "dem-sql-highlighter.highlightValue",
+				"title": "Highlight Value"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "dem-sql-highlighter.highlightValue",
+				"key": "ctrl+alt+l",
+				"mac": "shift+cmd+l"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "16.x",
+		"@types/vscode": "^1.60.1",
+		"@vscode/test-electron": "^2.1.5",
+		"eslint": "^8.20.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0"
+	},
+	"__metadata": {
+		"installedTimestamp": 1703916598168,
+		"id": "7043b54a-5599-4bfb-8264-db052aa19623",
+		"publisherId": "2215f836-da73-40a0-a044-5891f48ce73f",
+		"publisherDisplayName": "Demitha Hettihewa",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"pinned": false,
+		"preRelease": false
+	}
+}
